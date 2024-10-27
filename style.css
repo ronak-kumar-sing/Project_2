@@ -1,100 +1,158 @@
-*{
+/* CSS Reset */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
   height: 100%;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
+  position: fixed;
 }
 
-
-
-nav ul{
-
-  display:flex;
-  justify-content: end;
-  gap: 10px;
-  padding: 20px;
+/* Main layout */
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-nav ul li{
+/* Navbar */
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1vw;
+  padding: 2vh 2vw;
+}
+
+nav ul li {
   list-style: none;
-  margin: 0 10px;
-
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: #000;
-  font-weight: 550;
+  font-weight: 500;
 }
 
-nav ul li i{
-  font-size: large;
+nav ul li i {
+  font-size: 1.5em;
 }
-.center{
-  padding: 0px 40px;
+
+/* Center Content */
+.center {
+  padding: 0 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.center h1{
-  font-size: 80px;
+
+.center h1 {
+  font-size: 5vw;
   font-weight: 300;
   text-transform: capitalize;
-  line-height: 85px;
+  line-height: 1.2em;
 }
 
-.center-in{
+.center-in {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 2vw;
 }
-.center-in p{
-  padding:70px 20px;
-  font-size: 20px;
+
+.center-in p {
+  padding: 5vh 1vw;
+  font-size: 1.25vw;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 1.5em;
 }
-.center-right{
-  padding: 70px;
+
+.center-right {
+  padding: 5vh 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  gap: 20px;
+  gap: 2vh;
 }
-.elem{
-  padding: 10px 0px;
-  width: 270px;
+
+.elem {
+  padding: 1vh 0;
+  width: 100%;
+  max-width: 15vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: large;
-  border-top: #000 2px solid;
+  font-size: 1.2em;
+  border-top: 2px solid #000;
 }
-.elem a{
-  font-size: 20px;
+
+.elem a {
+  font-size: 1em;
   font-weight: 300;
   text-decoration: none;
   color: #000;
 }
-.elem i{
-  font-size: 29px;
+
+.elem i {
+  font-size: 1.5em;
   opacity: 0;
-  transition: all 0.3s;
+  transition: opacity 0.3s;
 }
-.elem:hover i{
+
+.elem:hover i {
   opacity: 1;
 }
-.elem:hover {
 
-  text-decoration: underline;
-
+/* Footer */
+footer {
+  height: 40vh;
+  width: 100%;
 }
 
-footer img{
+footer img {
+  height: 100%;
   width: 100%;
-  height: 305px;
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .center h1 {
+    font-size: 10vw;
+  }
+
+  .center-in p {
+    font-size: 4vw;
+  }
+
+  .elem {
+    max-width: 30vw;
+  }
+  nav ul {
+    gap: 2vw;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+  nav ul li i {
+    font-size: 1.5em;
+  }
+  .center-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0vw;
+  }
+  .elem {
+    padding: 1vh 0;
+    max-width: 100vw;
+  }
+}
